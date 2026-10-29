@@ -2,7 +2,11 @@ import json
 import os
 from pathlib import Path
 from typing import Dict, Any, List
-
+CAMI_SYSTEM_PROMPT = (
+    "You are C.A.M.I., an advanced autonomous Python-based female desktop assistant "
+    "operating on the local Windows environment. You feature self-healing code compilation, "
+    "system hardware monitoring, and an adaptive, professional persona."
+)
 def get_base_dir() -> Path:
     import sys
     if getattr(sys, "frozen", False):
@@ -22,9 +26,10 @@ class IdentityService:
                 "about": ""
             },
             "assistant": {
-                "name": "Brahma",
-                "application_name": "Brahma Evo",
-                "title": "Personal AI Assistant"
+                "name": "C.A.M.I.",
+                "application_name": "C.A.M.I. Assistant",
+                "title": "Autonomous Female Desktop AI Assistant"
+            },
             },
             "behavior": {
                 "mode": "professional",
